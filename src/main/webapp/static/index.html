@@ -1,38 +1,47 @@
 <!doctype html>
-<html lang="en" ng-app="healthfullUApp">
+<html lang="en" ng-app="bucketListApp">
 <head>
 <meta charset="utf-8">
-<title>Healthfull U</title>
+<title>Bucket List</title>
 
 <link rel="stylesheet" href="/static/css/bootstrap/bootstrap.css" />
 <link rel="stylesheet" href="/static/css/bootstrap/bootstrap-responsive.css" />
 <link rel="stylesheet" href="/static/css/angular/angular-busy.min.css" />
-<link rel="stylesheet" href="/static/css/healthfull_u/main.css" />
+<link rel="stylesheet" href="/static/css/bucket_list/main.css" />
 </head>
 
 <body>
+
 	<div ng-view></div>
+
+	
+
+
 	
 	<!-- core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABsTW4GsfrV4OwOPdEqQAjvvjW-SL_Kjg"></script>
 	<script src="/static/js/jquery/jquery-1.10.2.js"></script>
 	<script src="/static/js/jquery/jquery-ui-1.10.4.js"></script>
 	<script src="/static/js/jquery/jquery.popupoverlay.js"></script>
 	<script src="/static/js/bootstrap/bootstrap.js"></script>
-	<script src="/static/js/angular/angular.js"></script>
+	<script src='/static/js/lodash/lodash.min.js'></script>
+	<script src="/static/js/angular/angular.min.js"></script>
 	<script src="/static/js/angular/angular-cookies.min.js"></script>
 	<script src="/static/js/angular/angular-route.js"></script>
 	<script src="/static/js/angular/angular-busy.min.js"></script>
-	<script src="/static/js/healthfull_u/app.js"></script>
-	<script src="/static/js/healthfull_u/hu-main.js"></script>
-	<script src="/static/js/healthfull_u/controllers/foodController.js"></script>
-	<script src="/static/js/healthfull_u/controllers/emailController.js"></script>
-	<script src="/static/js/healthfull_u/controllers/userController.js"></script>
-	<script src="/static/js/healthfull_u/controllers/loginController.js"></script>
-	<script src="/static/js/healthfull_u/controllers/logoutController.js"></script>
-	<script src="/static/js/healthfull_u/services/authenticationService.js"></script>
+	<script src='/static/js/angular-simple-logger/dist/index.js'></script>
+	<script src='/static/js/angular-google-maps/dist/angular-google-maps.min.js'></script>
+	<script src="/static/js/bucket_list/app.js"></script>
+	<script src="/static/js/bucket_list/hu-main.js"></script>
+	<script src="/static/js/bucket_list/controllers/foodController.js"></script>
+	<script src="/static/js/bucket_list/controllers/emailController.js"></script>
+	<script src="/static/js/bucket_list/controllers/userController.js"></script>
+	<script src="/static/js/bucket_list/controllers/loginController.js"></script>
+	<script src="/static/js/bucket_list/controllers/logoutController.js"></script>
+	<script src="/static/js/bucket_list/controllers/dashboardController.js"></script>
+	<script src="/static/js/bucket_list/services/authenticationService.js"></script>
 
 </body>
 </html>

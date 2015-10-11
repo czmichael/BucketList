@@ -5,7 +5,7 @@
 set -e
 cd /Users/cz_michael/Google\ Drive/Work/workspace/BucketList
 mvn clean 
-mvn install
+mvn install -DskipTests
 
 wait
 echo "mvn clean install ......... Done!"
