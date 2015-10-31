@@ -44,7 +44,9 @@ echo "explode war file ......... Done!"
 
 # startup tomcat
 cd /usr/local/apache-tomcat-7.0.59/bin
-./startup.sh
+export JPDA_ADDRESS=8000
+export JPDA_TRANSPORT=dt_socket
+./catalina.sh jpda start
 
 wait
 echo "tomcat startup ......... Done!"

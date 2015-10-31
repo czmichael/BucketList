@@ -38,7 +38,7 @@ public class LoginResource {
 		String password = login.getPassword();
 		
 		boolean isValidUser = loginService.validateCredential(username, password);
-		if (isValidUser) {
+		if (isValidUser) {			
 			String token = loginService.generateToken(username);
 			return Response.status(Response.Status.OK).entity(new TokenDTO(token)).build();
 		} else {
