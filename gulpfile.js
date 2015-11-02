@@ -2,7 +2,7 @@
 var gulp   = require('gulp'),
     jshint = require('gulp-jshint'),
     notify = require('gulp-notify'),
-    less = require('gulp-less'),
+    sass = require('gulp-sass'),
     livereload = require('gulp-livereload');
 
 
@@ -59,12 +59,12 @@ gulp.task('copy-html', function() {
 		.pipe(notify('======== copy-html done. =========='));
 });
 
-gulp.task('less', function () {
-	return gulp.src(DEV_LOCATION + '/less/bucket_list/healthfullU.less')
-		.pipe(less())
+gulp.task('sass', function () {
+	return gulp.src(DEV_LOCATION + '/sass/bucket_list/bucket_list.scss')
+		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest(TOMCAT_LOCATION + '/css/bucket_list'))
 		.pipe(livereload())
-		.pipe(notify('======== less done. =========='));
+		.pipe(notify('======== sass done. =========='));
 });
 
 gulp.task('image', function () {
@@ -79,12 +79,12 @@ gulp.task('image', function () {
 // ======== Gulp watch ==========
 gulp.task('watch', function() {
 	livereload.listen();
-	gulp.watch(DEV_LOCATION + '/*.js', ['jshint', 'scripts-bucket_list']);
-	gulp.watch(DEV_LOCATION + '/controllers/*.js', ['jshint', 'scripts-bucket_list-controllers']);
-	gulp.watch(DEV_LOCATION + '/services/*.js', ['jshint', 'scripts-bucket_list-services']);
+	gulp.watch(DEV_LOCATION + '/js/bucket_list/*.js', ['jshint', 'scripts-bucket_list']);
+	gulp.watch(DEV_LOCATION + '/js/bucket_list/controllers/*.js', ['jshint', 'scripts-bucket_list-controllers']);
+	gulp.watch(DEV_LOCATION + '/js/bucket_list/services/*.js', ['jshint', 'scripts-bucket_list-services']);
 	gulp.watch(DEV_LOCATION + '/plugins/AdminLTE/js/*.js', ['jshint', 'admin-lte']);
 	gulp.watch(DEV_LOCATION + '/*.html', ['copy-html']);
-	gulp.watch(DEV_LOCATION + '/less/**/*.less', ['less']);
+	gulp.watch(DEV_LOCATION + '/sass/**/*.scss', ['sass']);
 	gulp.watch(DEV_LOCATION + '/img/*', ['image']);
 });
 

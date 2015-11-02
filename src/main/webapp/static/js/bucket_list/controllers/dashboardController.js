@@ -1,7 +1,9 @@
 bucketListApp.controller('DashboardCtrl', 
-function($scope, $http) {
 
-	$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+function ($scope, $http) {
+	
+	var myAddress = { latitude: 39.143827, longitude: -76.879980 };
+	$scope.map = { center: myAddress, zoom: 8 };
 
 
 });
