@@ -1,40 +1,7 @@
-html {
-	height: 100%
-}
-
-body {
-	height: 100%;
-	margin: 0;
-	padding-top: 50px; /* 60px to make the container go all the way to the bottom of the topbar */
-}
 
 
+@import 'core.scss';
+@import 'left_side_bar.scss';
 
-#map_canvas {
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-    position: relative;
-}
 
-.angular-google-map-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
-}
-
-.login_header, .login_footer {
-	margin: 10px 10px 20px 0px;	
-}
-
-.form-error {
-	color: red;
-}
 

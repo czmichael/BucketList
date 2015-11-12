@@ -63,6 +63,7 @@ gulp.task('sass', function () {
 	return gulp.src(DEV_LOCATION + '/sass/bucket_list/bucket_list.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest(TOMCAT_LOCATION + '/css/bucket_list'))
+		.pipe(gulp.dest(DEV_LOCATION + '/css/bucket_list'))
 		.pipe(livereload())
 		.pipe(notify('======== sass done. =========='));
 });
