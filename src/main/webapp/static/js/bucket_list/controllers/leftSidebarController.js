@@ -14,5 +14,4 @@ function ($scope, $http, $uibModal) {
 		
 	};
 
-
 }); 
