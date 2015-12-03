@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse sidebar" role="navigation">
+<nav class="navbar navbar-inverse sidebar" role="navigation"  ng-controller="LeftSidebarCtrl">
     <section class="container-fluid">
 		
 		<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
@@ -16,9 +16,9 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						Messages
-						<span class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span>
+					<a href ng-click='openLocationModal()'>
+						Add a location
+						<span class="pull-right hidden-xs showopacity glyphicon glyphicon-plus"></span>
 					</a>
 				</li>
 				<li class="dropdown">

@@ -2,8 +2,9 @@
 
 var bucketListApp = angular.module('bucketListApp', [
 	'ngRoute', 
-  'cgBusy',
-  'uiGmapgoogle-maps'
+	'cgBusy',
+	'ui.bootstrap',
+	'uiGmapgoogle-maps'
 ])
 .config(['$routeProvider', 
   function($routeProvider) {
