@@ -6,8 +6,15 @@
 	    
 	    
 	    <div class="form-group">
-	    	<input type="text" class="form-control" id="exampleInputEmail1" placeholder="type your location here..." autofocus>
-	    	<button type="button" class="btn btn-primary" ng-click="searchLocation()">Search</button>
+	    	<div class="row-fluid">
+		    	<input type="text" class="form-control span9" placeholder="type your location here..." 
+		    		   autofocus ng-model="location.address">
+		    	<button type="button" class="btn btn-primary span3" ng-click="searchLocation()">Search</button>
+	    	</div>
+	    	<div class="row-fluid">
+	    		<span class="span9">Latitude: {{location.latitude}}, Longitude: {{location.longitude}}</span>
+		    	<button type="button" class="btn btn-primary span3" ng-click="pingToMap()">Ping to map</button>
+	    	</div>
 	  	</div>
 	    
 	    
