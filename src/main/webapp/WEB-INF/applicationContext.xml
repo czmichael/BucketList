@@ -14,7 +14,7 @@
 
     <context:annotation-config/>
     <tx:annotation-driven/>
-    <context:component-scan base-package="com.healthfullu"/> 
+    <context:component-scan base-package="com.bl"/> 
     
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
